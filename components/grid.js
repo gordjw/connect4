@@ -9,13 +9,10 @@ export default function Grid({ grid, onClick }) {
 
     return (
         <div className="grid">
-            {grid.map((r, i) => {
+            {grid.map((value, i) => {
 
-                const row = r.map((c, j) => {
-                    return <GridCell value={c} onClick={onClick} key={j} row={i} col={j} />
-                })
+                return <GridCell value={value} onClick={onClick} key={i} cell={i} />
 
-                return ( <div className="row" key={i}>{row}</div> )
             })}
         </div>
     )

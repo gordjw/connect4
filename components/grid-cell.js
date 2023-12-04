@@ -1,7 +1,7 @@
 
 
-export default function GridCell({ value, row, col, onClick }) {
+export default function GridCell({ value, cell, onClick }) {
     return (
-        <div className="col"><input type="text" value={value} onClick={onClick} data-row={row} data-col={col}/></div>
+        <div className="cell"><input type="text" value={value} onClick={onClick} data-cell={cell} /></div>
     )
 }

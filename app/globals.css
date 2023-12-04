@@ -1,12 +1,18 @@
 
-.row {
+.grid {
   background-color: navy;
-  
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  max-width: 672px;
+  margin: 0 auto;
+
 }
 
-.row > .col {
+.cell {
   display: inline-block;
   padding: 1em;
+  width: 4em;
+  height: 4em;
   cursor: pointer;
 
   -webkit-user-select: none; /* Safari */
@@ -27,9 +33,14 @@ input {
   height: 4rem;
   border-radius: 2rem;
 
-  border: none;
+  border: 2px inset rgba(1,1,1,0.3);
   margin: 0;
   padding: 0;
+
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-origin: border-box;
 }
 input:focus {
   outline: none;
@@ -37,8 +48,12 @@ input:focus {
 
 input[value='1'] {
   background-color: red;
+  background-image: url('/4.svg');
+
 }
 
 input[value='2'] {
   background-color: yellow;
+  background-image: url('/4.svg');
+
 }
